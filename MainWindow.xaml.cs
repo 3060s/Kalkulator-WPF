@@ -1,4 +1,5 @@
 ﻿using System.Text;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -19,6 +20,46 @@ namespace Kalkulator_WPF
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Odwrocenie(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Potega(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Czyszczenie(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Cofanie(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Input(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Arytmetyka(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Przecinek(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Rownanie(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

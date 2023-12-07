@@ -11,27 +11,53 @@
         Background="Transparent"
         AllowsTransparency="True">
 
-    <Border Background="Gray"
-            CornerRadius="20"
+    <Border Background="#444444"
+            CornerRadius="10"
             BorderBrush="Black"
-            BorderThickness="5">
+            BorderThickness="4">
 
-        <Grid Margin="0,220,0,0">
-            <Border BorderThickness="1" BorderBrush="Black" Grid.Column="0"/>
+        <Grid Margin="3,220,3,3"
+              Background="#B9F1D1 ">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
 
             <Grid.RowDefinitions>
                 <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
             </Grid.RowDefinitions>
+
+            <UniformGrid Grid.Row="1" Rows="5" Margin="5,5,5,5">
+
+                <Button Content="+/-" Click="Odwrocenie"/>
+                <Button Content="x²" Click="Potega"/>
+                <Button Content="C" Click="Czyszczenie"/>
+                <Button Content="←" Click="Cofanie"/>
+
+                <Button Name="n7" Click="Input" Content="7"/>
+                <Button Name="n8" Click="Input" Content="8"/>
+                <Button Name="n9" Click="Input" Content="9"/>
+
+                <Button Content="/" Click="Arytmetyka"/>
+
+                <Button Name="n4" Click="Input" Content="4"/>
+                <Button Name="n5" Click="Input" Content="5"/>
+                <Button Name="n6" Click="Input" Content="6"/>
+
+                <Button Content="x" Click="Arytmetyka"/>
+
+                <Button Name="n1" Click="Input" Content="1"/>
+                <Button Name="n2" Click="Input" Content="2"/>
+                <Button Name="n3" Click="Input" Content="3"/>
+
+                <Button Content="-" Click="Arytmetyka"/>
+
+                <Button Name="n0" Click="Input" Content="0"/>
+
+                <Button Content="," Click="Przecinek"/>
+                <Button Content="+" Click="Arytmetyka"/>
+                <Button Content="=" Click="Rownanie"/>
+
+            </UniformGrid>
         </Grid>
 
     </Border>
