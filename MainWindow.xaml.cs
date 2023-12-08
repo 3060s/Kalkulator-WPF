@@ -41,7 +41,9 @@ namespace Kalkulator_WPF
 
         private void Czyszczenie(object sender, RoutedEventArgs e)
         {
-
+            display = "0";
+            ClearScreen = true;
+            Update();
         }
 
         private void Cofanie(object sender, RoutedEventArgs e)
