@@ -48,7 +48,17 @@ namespace Kalkulator_WPF
 
         private void Cofanie(object sender, RoutedEventArgs e)
         {
-
+            if (display == "0") { return; }
+            if (display.Length == 1 || display.Length == 2 && display.Contains("-"))
+            {
+                display = "0";
+                ClearScreen = true;
+            }
+            else
+            {
+                display = display.Remove(display.Length - 1, 1);
+            }
+            Update();
         }
 
         private void Input(object sender, RoutedEventArgs e)
@@ -81,8 +91,6 @@ namespace Kalkulator_WPF
         protected override void OnMouseLeftButtonDown(MouseButtonEventArgs e)
         {
             base.OnMouseLeftButtonDown(e);
-
-            // Begin dragging the window
             this.DragMove();
         }
 
