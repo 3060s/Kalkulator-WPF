@@ -17,12 +17,19 @@ namespace Kalkulator_WPF
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        private string display = "0";
+        private bool ClearScreen = true;
+
+
+
         public MainWindow()
         {
             InitializeComponent();
+            Update();
         }
 
-        private void Odwrocenie(object sender, RoutedEventArgs e)
+        private void Pierwiastek(object sender, RoutedEventArgs e)
         {
 
         }
@@ -44,7 +51,14 @@ namespace Kalkulator_WPF
 
         private void Input(object sender, RoutedEventArgs e)
         {
+            string num = (sender as Button).Name.ToString().Remove(0, 1);
 
+            if (display[0] == '0' && num == "0") { return; }
+            if (ClearScreen) { display = ""; }
+
+            display += num;
+            ClearScreen = false;
+            Update();
         }
 
         private void Arytmetyka(object sender, RoutedEventArgs e)
@@ -60,6 +74,19 @@ namespace Kalkulator_WPF
         private void Rownanie(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        protected override void OnMouseLeftButtonDown(MouseButtonEventArgs e)
+        {
+            base.OnMouseLeftButtonDown(e);
+
+            // Begin dragging the window
+            this.DragMove();
+        }
+
+        private void Update()
+        {
+            WynikEkran.Text = display;
         }
     }
 }
