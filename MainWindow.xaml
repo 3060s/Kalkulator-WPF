@@ -52,8 +52,10 @@
                          Rows="5"
                          Margin="5,140,5,5">
 
-                <Button Content="√" Click="Pierwiastek"/>
-                <Button Content="x²" Click="Potega"/>
+                <Button IsEnabled="False"/>
+                <Button IsEnabled="False"/>
+                <!--<Button Content="√" Click="Pierwiastek"/>
+                <Button Content="x²" Click="Potega"/>-->
                 <Button Content="CE" Click="Czyszczenie"/>
                 <Button Content="←" Click="Cofanie"/>
 
